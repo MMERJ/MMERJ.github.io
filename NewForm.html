@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order Form</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<style>
+body {
+background-color: #F5F5DC;
+font-family: Courier New;
+font-weight: bold;
+}
+.form-group {
+background-color: #E1C16E;
+border: 2px solid black;
+border-radius: 40px;
+margin: 20px;
+ padding: 20px;
+font-family: Courier New;
+font-weight: bold;
+}
+.btn {
+width: 400px;
+    margin-left: 110%;
+}
+.list {
+border: 2px solid black;
+border-radius: 40px;
+background-color: #E1C16E;
+}
+.col-6 {
+margin-left: 20px;
+}
+.col-3 {
+text-align: center;
+}
+.col-2 {
+text-align: center;
+}
+.payment {
+background-color: #E1C16E;
+border: 2px solid black;
+border-radius: 40px;
+margin-left: 65%;
+margin-bottom: 20px;
+ padding: 20px;
+font-family: Courier New;
+font-weight: bold;
+display: inline-block;
+width: 400px;
+font-weight: bold;
+}
+</style>
+</head>
+<body>
+  <div class="container mt-5">
+    <h2 style="text-align:center;">Order Form</h2>
+    <form id="orderForm" action="checkout.html">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" class="form-control" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Shipping Address:</label>
+        <input type="text" class="form-control" id="address" name="address" required>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Phone Number:</label>
+        <input type="text" class="form-control" id="phoneNo" name="phoneNo" required>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Email Address:</label>
+        <input type="text" class="form-control" id="email" name="email" required>
+      </div>
+
+
+     <div class="list">
+     <div class="container mt-4">
+      <div class="row">
+        <div class="col-6 row-heading">
+          Item
+        </div>
+        <div class="col-3 row-heading">
+          Quantity
+        </div>
+        <div class="col-2 row-heading">
+          Price
+        </div>
+        
+      </div>
+      <div class="row">
+        <div class="col-6">
+          1. Ube Halaya
+        </div>
+        <div class="col-3">
+          <input type="number" style="text-align:center;" value="0" class="qty" id="qty_ube"/>
+        </div>
+        <div class="col-2">
+          <input type="number" style="text-align:center;" readonly value="100" id="price_ube"/>
+        </div>
+      </div>
+      
+       <div class="row my-3">
+        <div class="col-6">
+          
+          2. Leche Flan
+        </div>
+        <div class="col-3">
+          <input type="number" style="text-align:center;" value="0" class="qty" id="qty_leche"/>
+        </div>
+        <div class="col-2">
+          <input type="number" style="text-align:center;" readonly value="90" id="price_leche"/>
+        </div>
+      </div>
+      
+      <div class="row my-3">
+        <div class="col-6">
+          
+          3. Red Tea
+        </div>
+        <div class="col-3">
+          <input type="number" style="text-align:center;" class="qty" value="0" id="qty_red"/>
+        </div>
+        <div class="col-2">
+          <input type="number" style="text-align:center;" readonly value="10" id="price_red"/>
+        </div>
+      </div>
+
+      <div class="row my-3">
+        <div class="col-6">
+          
+          4. Maruya
+        </div>
+        <div class="col-3">
+          <input type="number" style="text-align:center;" class="qty" value="0" id="qty_maruya"/>
+        </div>
+        <div class="col-2">
+          <input type="number" style="text-align:center;" readonly value="20" id="price_maruya"/>
+        </div>
+      </div>
+      
+      <div class="row my-3">
+        <div class="col-6">
+
+          5. Bananacue
+        </div>
+        <div class="col-3">
+          <input type="number" style="text-align:center;" class="qty" value="0" id="qty_bananacue"/>
+        </div>
+        <div class="col-2">
+          <input type="number" style="text-align:center;" readonly value="15" id="price_bananacue"/>
+        </div>
+      </div>
+
+      <div class="row my-3">
+        <div class="col-6">
+          
+           6. Yema
+        </div>
+        <div class="col-3">
+          <input type="number" style="text-align:center;" class="qty" value="0" id="qty_yema"/>
+        </div>
+        <div class="col-2">
+          <input type="number" style="text-align:center;" readonly value="5" id="price_yema"/>
+        </div>
+      </div>
+
+      <div class="row my-3">
+        <div class="col-6">
+          
+           7. Blue Lemonade
+        </div>
+        <div class="col-3">
+          <input type="number" style="text-align:center;" class="qty" value="0" id="qty_blue"/>
+        </div>
+        <div class="col-2">
+          <input type="number" style="text-align:center;" readonly value="10" id="price_blue"/>
+        </div>
+      </div>
+
+      <div class="row my-3">
+        <div class="col-6">
+          
+           8. Puto
+        </div>
+        <div class="col-3">
+          <input type="number" style="text-align:center;" class="qty" value="0" id="qty_puto"/>
+        </div>
+        <div class="col-2">
+          <input type="number" style="text-align:center;" readonly value="5" id="price_puto"/>
+        </div>
+      </div>
+
+      <div class="row my-3">
+        <div class="col-6">
+          
+           9. Cookies
+        </div>
+        <div class="col-3">
+          <input type="number" style="text-align:center;" class="qty" value="0" id="qty_cookies"/>
+        </div>
+        <div class="col-2">
+          <input type="number" style="text-align:center;" readonly value="15" id="price_cookies"/>
+        </div>
+      </div>
+
+      <div class="row my-3">
+        <div class="col-6">
+          
+           10. Graham Balls
+        </div>
+        <div class="col-3">
+          <input type="number" style="text-align:center;" class="qty" value="0" id="qty_graham"/>
+        </div>
+        <div class="col-2">
+          <input type="number" style="text-align:center;" readonly value="10" id="price_graham"/>
+        </div>
+      </div>
+      
+ <div class="row my-3">
+        <div class="col-6">
+          
+      <div class="row my-4">
+        <div class="col-9 text-right total">
+        
+        </div>
+        
+        <div class="col-2 total-val">
+          <h2><span id="total_value"></span
+        </div>
+      </div>
+      
+    </div>
+
+<div class="payment">
+<h4 style="text-align:center;">Payment Method</h4>
+<input type="radio" id="gcash" name="pay_method" value="Gcash" required>
+  <label for="gcash">Gcash</label><br>
+<input type="radio" id="paymaya" name="pay_method" value="Paymaya" required>
+  <label for="paymaya">Paymaya</label>
+</div>
+      
+      
+<div class="btn">
+<input type="submit" class="button" value="Create Bill" onclick=createBill()>
+<input type="reset" class="button" value="Clear">
+</div>
+  
+<a href="vince2.html" <button type="submit" class="btn btn-primary">Order Now!</a></button>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+</html>
