@@ -1,0 +1,157 @@
+<html>
+<head>
+  <title>Payment Form</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <style>
+html {
+height: 100%;
+width: 100%;
+margin: 0;
+padding: 0;
+}
+h2 {
+letter-spacing: 1cm;
+padding-bottom: 1mm;
+font-weight: bold;
+font-size: 4em;
+color: white;
+text-align: center;
+border-radius: 40px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+body {
+font-family: Courier New;
+font-weight: bold;
+background-image: url("bg4.jpg");
+background-size: cover;
+background-position: center;
+  background-repeat: no-repeat;
+}
+.allPayment {
+background-color: #5F9EA0;
+border-radius: 40px;
+margin: 70px;
+padding: 20px;
+font-family: Courier New;
+font-weight: bold;
+color: white;
+float: left;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.mayaPay {
+padding-bottom: 2em;
+}
+.gcashPay {
+padding-bottom: 2em;
+}
+button {
+font-family: Courier New;
+height: 2em;
+color: white;
+border: none;
+border-radius: 40px;
+margin-bottom: 2em;
+background-color: #5F9EA0;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+button:hover {
+background-color: #40B5AD;
+}
+#popupContainer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%
+  background-image: url("bg4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 9999;
+}
+
+#popupContent {
+  background-color: #5F9EA0;
+  color: white;
+  font-weight: bold;
+  font-family: Courier New;
+  max-width: 300px;
+  margin: 100px auto;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+</style>
+
+</head>
+<body>
+
+  <h2>PAYMENT FORM</h2>
+  <div class id="paymentForm">
+    <div class="allPayment">
+      <div class="form-group">
+        <label for="paymentMethod">Select Payment Method:</label>
+        <select class="form-control" id="paymentMethod" name="paymentMethod">
+          <option value="payMaya">PayMaya</option>
+          <option value="gcashQR">GCash</option>
+        </select>
+      </div>
+
+      <div id="creditCardDetails">
+        <div class="form-group">
+          <label for="cardNumber">PayMaya/Gcash Number:</label>
+          <input type="text" class="form-control" id="cardNumber" value="09125235645 - Marx Anthony Castro" name="cardNumber" required readonly>
+        </div>
+
+        <div class="form-group">
+        <label for="paymentImage">Proof of Payment Image:</label>
+        <input type="file" id="paymentImage" name="paymentImage">
+      </div>
+
+       
+      </div>
+
+      <div id="gcashQRDetails" style="display: none;">
+       <div class="gcashPay">
+          <label for="cardNumber">PayMaya/Gcash Number:</label>
+          <input type="text" class="form-control" id="cardNumber" value="09125235645 - Marx Anthony Castro" name="cardNumber" required readonly>
+        </div> 
+        <div class="form-group">
+        <label for="paymentImage">Proof of Payment Image:</label>
+        <input type="file" id="paymentImage" name="paymentImage">
+      </div>
+      </div>
+
+<center>
+<div>
+<button id="popupButton">Submit Payment</button>
+</div>
+</div>
+<div id="popupContainer">
+  <div id="popupContent">
+    <h3>Thank You!</h3>
+    <p>Order Successfully Placed!</p>
+    <button id="closeButton">Close</button>
+  </div>
+</div>
+</center>
+</div>
+
+<script>
+
+var popupContainer = document.getElementById("popupContainer");
+var popupButton = document.getElementById("popupButton");
+var closeButton = document.getElementById("closeButton");
+
+popupButton.addEventListener("click", function() {
+  popupContainer.style.display = "block";
+});
+
+closeButton.addEventListener("click", function() {
+  popupContainer.style.display = "none";
+});
+</script>
+</body>
+</html>
